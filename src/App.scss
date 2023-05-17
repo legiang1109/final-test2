@@ -1,0 +1,91 @@
+.App {
+  text-align: center;
+  width: 70%;
+  position: absolute;
+  background-color: aliceblue;
+  transform: translateX(-50%);
+  left: 50%;
+  top: 40px;
+  nav {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: rgb(22, 132, 206);
+  }
+  .container__filter {
+    button {
+      margin: 0 20px;
+    }
+    ul.filters {
+      display: flex;
+      list-style: none;
+      width: 100%;
+      justify-content: space-around;
+      list-style: none;
+      li {
+        width: 30%;
+        height: 30px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+
+        a.active {
+          background-color: rgb(155, 188, 209);
+        }
+        &:hover {
+          a {
+            color: red;
+          }
+        }
+        a {
+          width: 100%;
+          height: 100%;
+          text-decoration: none;
+          color: #333;
+        }
+      }
+    }
+  }
+  .form-data {
+    border-top: 1px solid #333;
+    padding-top: 30px;
+    button{
+      margin-left: 10px;
+    }
+  }
+  .container__list {
+    margin-top: 40px;
+    .view {
+      margin: 10px 0;
+      border-bottom: 1px solid #333;
+    }
+    .item {
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+      margin-bottom: 30px;
+
+      .edit {
+        display: none;
+      }
+      &.editing {
+        .edit {
+          display: block;
+          width: 70%;
+        }
+        label {
+          display: none;
+        }
+      }
+      label {
+        border: 1px solid #333;
+        margin: 0 40px;
+        flex-grow: 2;
+      }
+    }
+    .item.complete {
+      label {
+        text-decoration-line: line-through;
+      }
+    }
+  }
+}
